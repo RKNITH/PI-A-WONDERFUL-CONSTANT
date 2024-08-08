@@ -18,7 +18,7 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1000;
 }
@@ -28,8 +28,51 @@ header h1 {
     font-size: 2.5em;
 }
 
+/* Menu icon styles */
+.menu-container {
+    position: relative;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
 nav {
     margin: 10px 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Active menu styles */
+.nav-active {
+    display: block;
 }
 
 nav ul {
